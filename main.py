@@ -34,9 +34,21 @@ if __name__ == '__main__':
     print(list([i, j, k] for i in range(x+1) for j in range(y+1)
                for k in range(z+1) if i+j+k != n))
 
+"""Find the all the odd number between l and r"""
+
 
 def oddNumbers(l, r):
     # Write your code here
     for numb in range(l, r+1):
         if numb % 2 != 0:
             print(numb, end=" ")
+
+
+"""Find the second largest number - runner up"""
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+
+    arr = (set(arr))
+    arr.remove(max(arr))
+    print(max(arr))
